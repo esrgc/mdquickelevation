@@ -10,15 +10,17 @@ $(document).ready(function() {
   var map = L.map('map', {
       zoomControl: false,
       attributionControl: false
-  }).setView([38.9, -77.3], 7);
+  }).setView([38.9, -77.3], 7)
+
   L.tileLayer('http://{s}.tiles.mapbox.com/v3/esrgc.map-0y6ifl91/{z}/{x}/{y}.png', {
       attribution: false,
       maxZoom: 18
-  }).addTo(map);
+  }).addTo(map)
+
   L.tileLayer('http://{s}.tiles.mapbox.com/v3/esrgc.mdbdry/{z}/{x}/{y}.png', {
       attribution: false,
       maxZoom: 12
-  }).addTo(map);
+  }).addTo(map)
 
   map.on('click', function(e) {
     var coordinates = {
