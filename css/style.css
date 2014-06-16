@@ -6,6 +6,11 @@ a {
   color: #676AFA;
 }
 
+a:hover {
+  color: #676AFA;
+  text-decoration: underline;
+}
+
 .container {
   background: white;
   border-left: 1px solid #ccc;
