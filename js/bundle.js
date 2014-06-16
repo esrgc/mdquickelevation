@@ -31,11 +31,11 @@ $(document).ready(function() {
   })
 
   $('.getLocation').click(function() {
-    var el = this
-    $(el).attr('disabled', 'disabled')
+    var btn = $(this)
+    btn.button('loading')
     $('.results').append('<br><span>Getting your location...<br>')
     navigator.geolocation.getCurrentPosition(function(position) {
-      $(el).removeAttr('disabled')
+      btn.button('reset')
       var coordinates = {x: position.coords.longitude, y: position.coords.latitude}
       $('.results').append('<span>Getting elevation...<br>')
       $('.results').append('<span>Location = ' + Math.round(coordinates.x * 100) / 100 + ', ' + Math.round(coordinates.y * 100) / 100  + '<br>')
@@ -45,12 +45,12 @@ $(document).ready(function() {
 
   $('#addressForm').submit(function(e) {
     e.preventDefault()
-    var el = $('#addressForm button')
-    $(el).attr('disabled', 'disabled')
+    var btn = $('#addressForm button')
+    btn.button('loading')
     var address = $('#addressInput').val()
     $('.results').append('<br><span>Getting location of address...')
     geocoder.search(address, function(err, res) {
-      $(el).removeAttr('disabled')
+      btn.button('reset')
       if(err) {
       } else {
         if(res.candidates.length > 0) {
@@ -99,7 +99,6 @@ $(document).ready(function() {
       dataType: 'json'
     })
     .done(function(res) {
-      console.log(res)
       handleResponse(res, marker)
     })
     .fail(function(res){
