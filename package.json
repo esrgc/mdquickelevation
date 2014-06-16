@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Frank Rowe <fsrowe@gmail.com> (http://frankrowe.org/)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mdimapgeocoder": "^0.1.2",
+    "proj4": "^2.1.2"
+  }
 }

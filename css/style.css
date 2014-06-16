@@ -1,3 +1,38 @@
+body {
+  background: #f9f9f9;
+}
+
 .container {
-  margin-top: 20px;
+  background: white;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.container .row {
+  
+}
+
+.container button {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+#addressInput {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.results {
+  padding-top: 0px;
+  padding-bottom: 15px;
+}
+
+.elevation {
+  font-weight: bold;
 }
