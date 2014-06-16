@@ -2,6 +2,10 @@ body {
   background: #f9f9f9;
 }
 
+a {
+  color: #676AFA;
+}
+
 .container {
   background: white;
   border-left: 1px solid #ccc;
@@ -49,5 +53,13 @@ body {
   padding: 3px 15px 3px 15px;
   font-size: 10px;
   overflow: hidden;
+}
+
+.about a.right {
+  float: right;
+}
+
+.about a.right:last-child {
+  padding-right: 5px;
 }
 
